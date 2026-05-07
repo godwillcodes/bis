@@ -501,7 +501,9 @@ function bis_augment_organization_schema( $data, $context = null ) {
 
 	$about_page_id = bis_schema_about_page_id();
 	if ( $about_page_id ) {
-		$data['aboutPage'] = get_permalink( $about_page_id );
+		// `aboutPage` is not a valid Organization property in schema.org.
+		// Use `subjectOf` to point to the dedicated About page.
+		$data['subjectOf'] = get_permalink( $about_page_id );
 	}
 
 	// Only emit hasOfferCatalog on pages where the referenced Service nodes
@@ -891,10 +893,9 @@ function bis_augment_breadcrumb_schema( $data, $context = null ) {
 		return $data;
 	}
 
-	$data['itemListElement'][ $last_index ]['item'] = array(
-		'@type' => 'WebPage',
-		'@id'   => $current_url,
-	);
+	// URL string keeps BreadcrumbList lean and avoids duplicated @type expansion
+	// in some validators when they resolve nested node references.
+	$data['itemListElement'][ $last_index ]['item'] = $current_url;
 
 	return $data;
 }

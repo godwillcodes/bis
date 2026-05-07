@@ -292,7 +292,7 @@ class BIS_Schema_Founder_Person extends BIS_Schema_Piece_Base {
 			'@type'         => 'Person',
 			'@id'           => bis_schema_founder_id(),
 			'name'          => $founder['name'],
-			'foundedCompany' => array( '@id' => $this->organization_id() ),
+			'worksFor'      => array( '@id' => $this->organization_id() ),
 		);
 
 		if ( ! empty( $founder['jobTitle'] ) ) {
