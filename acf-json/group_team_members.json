@@ -1,0 +1,144 @@
+[
+    {
+        "key": "group_team_members",
+        "title": "Team Members",
+        "fields": [
+            {
+                "key": "field_team_members_repeater",
+                "label": "Team Members",
+                "name": "team_members",
+                "type": "repeater",
+                "instructions": "Add team members to display on the team page.",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "collapsed": "field_team_member_name",
+                "min": 0,
+                "max": 0,
+                "layout": "block",
+                "button_label": "Add Team Member",
+                "sub_fields": [
+                    {
+                        "key": "field_team_member_photo",
+                        "label": "Photo",
+                        "name": "photo",
+                        "type": "image",
+                        "instructions": "Upload a square photo for best results. Recommended size: 600x600px.",
+                        "required": 1,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "30",
+                            "class": "",
+                            "id": ""
+                        },
+                        "return_format": "url",
+                        "preview_size": "medium",
+                        "library": "all",
+                        "min_width": "",
+                        "min_height": "",
+                        "min_size": "",
+                        "max_width": "",
+                        "max_height": "",
+                        "max_size": "",
+                        "mime_types": "jpg, jpeg, png, webp"
+                    },
+                    {
+                        "key": "field_team_member_name",
+                        "label": "Name",
+                        "name": "name",
+                        "type": "text",
+                        "instructions": "Full name of the team member.",
+                        "required": 1,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "35",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "placeholder": "e.g. John Smith",
+                        "prepend": "",
+                        "append": "",
+                        "maxlength": ""
+                    },
+                    {
+                        "key": "field_team_member_title",
+                        "label": "Job Title",
+                        "name": "title",
+                        "type": "text",
+                        "instructions": "Position or role in the company.",
+                        "required": 1,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "35",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "placeholder": "e.g. Chief Executive Officer",
+                        "prepend": "",
+                        "append": "",
+                        "maxlength": ""
+                    },
+                    {
+                        "key": "field_team_member_linkedin",
+                        "label": "LinkedIn URL",
+                        "name": "linkedin",
+                        "type": "url",
+                        "instructions": "Full LinkedIn profile URL.",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "50",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "placeholder": "https://linkedin.com/in/username"
+                    },
+                    {
+                        "key": "field_team_member_bio",
+                        "label": "Biography",
+                        "name": "bio",
+                        "type": "wysiwyg",
+                        "instructions": "Detailed biography of the team member. Supports rich text formatting.",
+                        "required": 1,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "tabs": "all",
+                        "toolbar": "full",
+                        "media_upload": 0,
+                        "delay": 0
+                    }
+                ]
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "page_template",
+                    "operator": "==",
+                    "value": "pages/team.php"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": "Team members displayed on the Team page with photo, name, title, LinkedIn, and bio.",
+        "show_in_rest": 0
+    }
+]

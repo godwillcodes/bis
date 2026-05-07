@@ -1,0 +1,1442 @@
+{
+    "key": "group_service_page_new_6f7a8b9c",
+    "title": "Service Page — Editorial Template",
+    "fields": [
+        {
+            "key": "field_sp_hero_tab",
+            "label": "Hero",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_sp_hero_eyebrow",
+            "label": "Eyebrow",
+            "name": "section_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "A short, understated label that sets context. Keep it to 2–4 words.",
+            "required": 0,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placeholder": "e.g. Our Approach",
+            "maxlength": "",
+            "default_value": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_sp_hero_title",
+            "label": "Primary Title",
+            "name": "hero_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Bold, outcome-focused headline. Aim for clarity and impact in under 12 words.",
+            "required": 0,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placeholder": "e.g. Transforming Communication Access Worldwide",
+            "maxlength": "",
+            "default_value": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_sp_hero_description",
+            "label": "Description",
+            "name": "primary_description",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "Value-driven overview. Write in clear, professional prose. Supports bold, links, and lists.",
+            "required": 0,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "default_value": "",
+            "delay": 0
+        },
+        {
+            "key": "field_sp_hero_cta_group",
+            "label": "Call to Action",
+            "name": "hero_cta_group",
+            "aria-label": "",
+            "type": "group",
+            "instructions": "Optional buttons displayed below the description.",
+            "required": 0,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_sp_hero_btn_text",
+                    "label": "Primary Button Text",
+                    "name": "hero_button_text",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "Action-oriented label. e.g. 'Get Started', 'Schedule Consultation'",
+                    "required": 0,
+                    "conditional_logic": false,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "placeholder": "Get Started",
+                    "maxlength": "",
+                    "default_value": "",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_sp_hero_btn_link",
+                    "label": "Primary Button Link",
+                    "name": "hero_button_link",
+                    "aria-label": "",
+                    "type": "url",
+                    "instructions": "Destination URL for the primary button.",
+                    "required": 0,
+                    "conditional_logic": false,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "placeholder": "https:\/\/",
+                    "default_value": ""
+                },
+                {
+                    "key": "field_sp_hero_btn2_text",
+                    "label": "Secondary Button Text",
+                    "name": "hero_secondary_button_text",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "Optional secondary action. e.g. 'Learn More', 'View Services'",
+                    "required": 0,
+                    "conditional_logic": false,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "placeholder": "Learn More",
+                    "maxlength": "",
+                    "default_value": "",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_sp_hero_btn2_link",
+                    "label": "Secondary Button Link",
+                    "name": "hero_secondary_button_link",
+                    "aria-label": "",
+                    "type": "url",
+                    "instructions": "Destination URL for the secondary button.",
+                    "required": 0,
+                    "conditional_logic": false,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "placeholder": "https:\/\/",
+                    "default_value": ""
+                }
+            ]
+        },
+        {
+            "key": "field_sp_hero_primary_image",
+            "label": "Primary Image",
+            "name": "primary_image",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "Featured image for the first hero section. Recommended size: 800x600px or larger.",
+            "required": 0,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": 0,
+            "min_height": 0,
+            "min_size": 0,
+            "max_width": 0,
+            "max_height": 0,
+            "max_size": 0,
+            "mime_types": ""
+        },
+        {
+            "key": "field_sp_hero_secondary_eyebrow",
+            "label": "Secondary Eyebrow",
+            "name": "secondary_eyebrow",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Short contextual label for the second section. 2–4 words.",
+            "required": 0,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placeholder": "e.g. Learn More",
+            "maxlength": "",
+            "default_value": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_sp_hero_secondary_title",
+            "label": "Secondary Title",
+            "name": "secondary_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Headline for the second hero section. Aim for clarity and impact.",
+            "required": 0,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placeholder": "e.g. Our Commitment to Excellence",
+            "maxlength": "",
+            "default_value": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_sp_hero_supporting_description",
+            "label": "Supporting Description",
+            "name": "supporting_description",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "Additional context for the second section. Supports bold, links, and lists.",
+            "required": 0,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "default_value": "",
+            "delay": 0
+        },
+        {
+            "key": "field_sp_hero_secondary_image",
+            "label": "Secondary Image",
+            "name": "secondary_image",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "Featured image for the second hero section. Recommended size: 800x600px or larger.",
+            "required": 0,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": 0,
+            "min_height": 0,
+            "min_size": 0,
+            "max_width": 0,
+            "max_height": 0,
+            "max_size": 0,
+            "mime_types": ""
+        },
+        {
+            "key": "field_sp_solutions_tab",
+            "label": "Solutions",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_sp_solutions_eyebrow",
+            "label": "Eyebrow",
+            "name": "eyebrow_text",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Short contextual label. 2–4 words.",
+            "required": 0,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placeholder": "e.g. Our Solutions",
+            "maxlength": "",
+            "default_value": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_sp_solutions_title",
+            "label": "Section Title",
+            "name": "sub_solutions_section_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Compelling headline that frames the solutions offered.",
+            "required": 0,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placeholder": "e.g. Comprehensive Solutions for Every Need",
+            "maxlength": "",
+            "default_value": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_sp_solutions_description",
+            "label": "Section Description",
+            "name": "sub_solutions_section_description",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Brief supporting text. 1–2 sentences that reinforce the value proposition.",
+            "required": 0,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placeholder": "Describe the breadth and depth of your solutions...",
+            "rows": 3,
+            "maxlength": "",
+            "default_value": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_sp_solutions_manual",
+            "label": "Manual Solution Cards",
+            "name": "non_pages_solutions",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "Only displays if no child solution pages exist. Add cards manually to showcase offerings.",
+            "required": 0,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "field_sp_solution_card_title",
+            "min": 0,
+            "max": 12,
+            "layout": "block",
+            "button_label": "Add Solution Card",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_sp_solution_card_title",
+                    "label": "Title",
+                    "name": "title",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "Clear, descriptive title.",
+                    "required": 0,
+                    "conditional_logic": false,
+                    "wrapper": {
+                        "width": "100",
+                        "class": "",
+                        "id": ""
+                    },
+                    "maxlength": "",
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_sp_solutions_manual"
+                },
+                {
+                    "key": "field_sp_solution_card_desc",
+                    "label": "Description",
+                    "name": "description",
+                    "aria-label": "",
+                    "type": "wysiwyg",
+                    "instructions": "Brief explanation of this solution. Supports basic formatting.",
+                    "required": 0,
+                    "conditional_logic": false,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "tabs": "all",
+                    "toolbar": "basic",
+                    "media_upload": 0,
+                    "default_value": "",
+                    "delay": 0,
+                    "parent_repeater": "field_sp_solutions_manual"
+                }
+            ]
+        },
+        {
+            "key": "field_sp_why_tab",
+            "label": "Why Choose Us",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_sp_why_eyebrow",
+            "label": "Eyebrow",
+            "name": "why_piedmont_global_eyebrow",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Short contextual label. 2–4 words.",
+            "required": 0,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placeholder": "e.g. Why Choose Us",
+            "maxlength": "",
+            "default_value": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_sp_why_title",
+            "label": "Section Title",
+            "name": "why_piedmont_global_section_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Authoritative headline that conveys your competitive advantage.",
+            "required": 0,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placeholder": "e.g. The Piedmont Advantage",
+            "maxlength": "",
+            "default_value": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_sp_why_description",
+            "label": "Section Description",
+            "name": "why_piedmont_global_description",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "Expand on your unique value. Write in confident, professional prose.",
+            "required": 0,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "default_value": "",
+            "delay": 0
+        },
+        {
+            "key": "field_sp_why_cta_group",
+            "label": "Call to Action",
+            "name": "why_cta_group",
+            "aria-label": "",
+            "type": "group",
+            "instructions": "Optional button displayed in this section.",
+            "required": 0,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_sp_why_btn_text",
+                    "label": "Button Text",
+                    "name": "why_button_text",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": false,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "placeholder": "Learn More",
+                    "maxlength": "",
+                    "default_value": "",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_sp_why_btn_link",
+                    "label": "Button Link",
+                    "name": "why_button_link",
+                    "aria-label": "",
+                    "type": "url",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": false,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "placeholder": "https:\/\/",
+                    "default_value": ""
+                }
+            ]
+        },
+        {
+            "key": "field_sp_why_cards",
+            "label": "Benefit Cards",
+            "name": "why_piedmont_global_cards",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "Highlight 3–4 key differentiators. Each card should focus on a single benefit.",
+            "required": 0,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "field_sp_why_card_title",
+            "min": 0,
+            "max": 8,
+            "layout": "block",
+            "button_label": "Add Benefit Card",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_sp_why_card_title",
+                    "label": "Card Title",
+                    "name": "card_title",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "Concise benefit headline.",
+                    "required": 0,
+                    "conditional_logic": false,
+                    "wrapper": {
+                        "width": "100",
+                        "class": "",
+                        "id": ""
+                    },
+                    "maxlength": "",
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_sp_why_cards"
+                },
+                {
+                    "key": "field_sp_why_card_desc",
+                    "label": "Card Description",
+                    "name": "card_description",
+                    "aria-label": "",
+                    "type": "wysiwyg",
+                    "instructions": "Brief supporting text. 2–3 sentences.",
+                    "required": 0,
+                    "conditional_logic": false,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "tabs": "all",
+                    "toolbar": "basic",
+                    "media_upload": 0,
+                    "default_value": "",
+                    "delay": 0,
+                    "parent_repeater": "field_sp_why_cards"
+                }
+            ]
+        },
+        {
+            "key": "field_sp_industries_tab",
+            "label": "Industries",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_sp_industries_eyebrow",
+            "label": "Eyebrow",
+            "name": "industries_eyebrow",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Short contextual label. 2–4 words.",
+            "required": 0,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placeholder": "e.g. Industries We Serve",
+            "maxlength": "",
+            "default_value": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_sp_industries_title",
+            "label": "Section Title",
+            "name": "industries_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Headline that frames your industry expertise.",
+            "required": 0,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placeholder": "e.g. Tailored Solutions for High-Impact Sectors",
+            "maxlength": "",
+            "default_value": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_sp_industries_description",
+            "label": "Section Description",
+            "name": "industries_description",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Brief supporting text. 1–2 sentences.",
+            "required": 0,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placeholder": "Describe your industry focus...",
+            "rows": 3,
+            "maxlength": "",
+            "default_value": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_sp_industries_cta_group",
+            "label": "Call to Action",
+            "name": "industries_cta_group",
+            "aria-label": "",
+            "type": "group",
+            "instructions": "Optional button displayed in this section.",
+            "required": 0,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_sp_industries_btn_text",
+                    "label": "Button Text",
+                    "name": "industries_button_text",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": false,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "placeholder": "View All Industries",
+                    "maxlength": "",
+                    "default_value": "",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_sp_industries_btn_link",
+                    "label": "Button Link",
+                    "name": "industries_button_link",
+                    "aria-label": "",
+                    "type": "url",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": false,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "placeholder": "https:\/\/",
+                    "default_value": ""
+                }
+            ]
+        },
+        {
+            "key": "field_sp_industries_linked",
+            "label": "Linked Industries",
+            "name": "industries_section",
+            "aria-label": "",
+            "type": "relationship",
+            "instructions": "Select industry pages to display as linked cards.",
+            "required": 0,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "industry"
+            ],
+            "filters": [
+                "search"
+            ],
+            "elements": [
+                "featured_image"
+            ],
+            "min": 0,
+            "max": 12,
+            "return_format": "object",
+            "taxonomy": [],
+            "bidirectional_target": []
+        },
+        {
+            "key": "field_sp_industries_manual",
+            "label": "Manual Industry Cards",
+            "name": "non_paged_industries_cards",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "Add industry cards that don't link to dedicated pages.",
+            "required": 0,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "field_sp_industry_card_title",
+            "min": 0,
+            "max": 12,
+            "layout": "block",
+            "button_label": "Add Industry Card",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_sp_industry_card_title",
+                    "label": "Title",
+                    "name": "title",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": false,
+                    "wrapper": {
+                        "width": "100",
+                        "class": "",
+                        "id": ""
+                    },
+                    "maxlength": "",
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_sp_industries_manual"
+                },
+                {
+                    "key": "field_sp_industry_card_desc",
+                    "label": "Description",
+                    "name": "description",
+                    "aria-label": "",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": false,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "rows": 3,
+                    "maxlength": "",
+                    "default_value": "",
+                    "new_lines": "",
+                    "placeholder": "",
+                    "parent_repeater": "field_sp_industries_manual"
+                }
+            ]
+        },
+        {
+            "key": "field_sp_outcomes_tab",
+            "label": "Outcomes",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_sp_outcomes_eyebrow",
+            "label": "Eyebrow",
+            "name": "outcomes_eyebrow",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Short contextual label. 2–4 words.",
+            "required": 0,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placeholder": "e.g. Outcomes",
+            "maxlength": "",
+            "default_value": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_sp_outcomes_title",
+            "label": "Section Title",
+            "name": "outcomes_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Results-focused headline.",
+            "required": 0,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placeholder": "e.g. Measurable Results You Can Expect",
+            "maxlength": "",
+            "default_value": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_sp_outcomes_description",
+            "label": "Section Description",
+            "name": "outcomes_description",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Brief supporting text. 1–2 sentences.",
+            "required": 0,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placeholder": "Describe the outcomes clients can expect...",
+            "rows": 3,
+            "maxlength": "",
+            "default_value": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_sp_outcomes_image",
+            "label": "Featured Image",
+            "name": "featured_image",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "Visual element for the bento grid. Recommended: 800×600px or larger.",
+            "required": 0,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "preview_size": "medium",
+            "library": "all",
+            "mime_types": "jpg, jpeg, png, webp",
+            "min_width": 0,
+            "min_height": 0,
+            "min_size": 0,
+            "max_width": 0,
+            "max_height": 0,
+            "max_size": 0
+        },
+        {
+            "key": "field_sp_outcomes_cards",
+            "label": "Outcome Cards",
+            "name": "outcomes",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "Add 4–6 outcome cards for optimal bento grid layout.",
+            "required": 0,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "field_sp_outcome_card_title",
+            "min": 0,
+            "max": 8,
+            "layout": "block",
+            "button_label": "Add Outcome Card",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_sp_outcome_card_title",
+                    "label": "Title",
+                    "name": "title",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "Outcome headline. Be specific and measurable when possible.",
+                    "required": 0,
+                    "conditional_logic": false,
+                    "wrapper": {
+                        "width": "100",
+                        "class": "",
+                        "id": ""
+                    },
+                    "maxlength": "",
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_sp_outcomes_cards"
+                },
+                {
+                    "key": "field_sp_outcome_card_desc",
+                    "label": "Description",
+                    "name": "description",
+                    "aria-label": "",
+                    "type": "textarea",
+                    "instructions": "Brief supporting detail. 1–2 sentences.",
+                    "required": 0,
+                    "conditional_logic": false,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "rows": 3,
+                    "maxlength": "",
+                    "default_value": "",
+                    "new_lines": "",
+                    "placeholder": "",
+                    "parent_repeater": "field_sp_outcomes_cards"
+                }
+            ]
+        },
+        {
+            "key": "field_sp_competitor_tab",
+            "label": "Competitor Analysis",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_sp_competitor_eyebrow",
+            "label": "Eyebrow",
+            "name": "competitor_eyebrow",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Short contextual label. 2–4 words.",
+            "required": 0,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placeholder": "e.g. Market Analysis",
+            "maxlength": "",
+            "default_value": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_sp_competitor_title",
+            "label": "Section Title",
+            "name": "competitor_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Headline for the competitive landscape section.",
+            "required": 0,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placeholder": "e.g. Competitor Landscape",
+            "maxlength": "",
+            "default_value": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_sp_competitor_description",
+            "label": "Section Description",
+            "name": "competitor_description",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Brief context for the infographic. 1–2 sentences.",
+            "required": 0,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placeholder": "Describe what the infographic shows...",
+            "rows": 3,
+            "maxlength": "",
+            "default_value": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_sp_competitor_cta_group",
+            "label": "Call to Action",
+            "name": "competitor_cta_group",
+            "aria-label": "",
+            "type": "group",
+            "instructions": "Optional button displayed in this section.",
+            "required": 0,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_sp_competitor_btn_text",
+                    "label": "Button Text",
+                    "name": "competitor_button_text",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": false,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "placeholder": "Request Full Report",
+                    "maxlength": "",
+                    "default_value": "",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_sp_competitor_btn_link",
+                    "label": "Button Link",
+                    "name": "competitor_button_link",
+                    "aria-label": "",
+                    "type": "url",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": false,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "placeholder": "https:\/\/",
+                    "default_value": ""
+                }
+            ]
+        },
+        {
+            "key": "field_sp_competitor_image",
+            "label": "Infographic Image",
+            "name": "competitor_image",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "Upload the competitor landscape infographic. This image triggers the section to display.",
+            "required": 0,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all",
+            "mime_types": "jpg, jpeg, png, webp, svg",
+            "min_width": 0,
+            "min_height": 0,
+            "min_size": 0,
+            "max_width": 0,
+            "max_height": 0,
+            "max_size": 0
+        },
+        {
+            "key": "field_sp_resources_tab",
+            "label": "Related Resources",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_sp_resources_eyebrow",
+            "label": "Eyebrow",
+            "name": "resources_eyebrow",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Short contextual label. 2–4 words.",
+            "required": 0,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placeholder": "e.g. Resources",
+            "maxlength": "",
+            "default_value": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_sp_resources_title",
+            "label": "Section Title",
+            "name": "resources_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Headline for the resources section.",
+            "required": 0,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placeholder": "e.g. Related Resources",
+            "maxlength": "",
+            "default_value": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_sp_resources_description",
+            "label": "Section Description",
+            "name": "resources_description",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Brief supporting text. 1–2 sentences.",
+            "required": 0,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placeholder": "Describe the resources available...",
+            "rows": 3,
+            "maxlength": "",
+            "default_value": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_sp_resources_cta_group",
+            "label": "Call to Action",
+            "name": "resources_cta_group",
+            "aria-label": "",
+            "type": "group",
+            "instructions": "Optional button displayed in this section.",
+            "required": 0,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_sp_resources_btn_text",
+                    "label": "Button Text",
+                    "name": "resources_button_text",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": false,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "placeholder": "View All Resources",
+                    "maxlength": "",
+                    "default_value": "",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_sp_resources_btn_link",
+                    "label": "Button Link",
+                    "name": "resources_button_link",
+                    "aria-label": "",
+                    "type": "url",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": false,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "placeholder": "https:\/\/",
+                    "default_value": ""
+                }
+            ]
+        },
+        {
+            "key": "field_sp_resources_items",
+            "label": "Selected Resources",
+            "name": "related_resources",
+            "aria-label": "",
+            "type": "relationship",
+            "instructions": "Select resources to display in the carousel. Recommended: 3–6 items.",
+            "required": 0,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "resource",
+                "post"
+            ],
+            "filters": [
+                "search",
+                "post_type"
+            ],
+            "elements": [
+                "featured_image"
+            ],
+            "min": 0,
+            "max": 12,
+            "return_format": "object",
+            "taxonomy": [],
+            "bidirectional_target": []
+        },
+        {
+            "key": "field_sp_faq_tab",
+            "label": "FAQ",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_sp_faq_eyebrow",
+            "label": "Eyebrow",
+            "name": "faq_eyebrow",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Short contextual label. 2–4 words.",
+            "required": 0,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placeholder": "e.g. Support",
+            "maxlength": "",
+            "default_value": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_sp_faq_title",
+            "label": "Section Title",
+            "name": "faq_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Headline for the FAQ section.",
+            "required": 0,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placeholder": "e.g. Frequently Asked Questions",
+            "maxlength": "",
+            "default_value": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_sp_faq_description",
+            "label": "Section Description",
+            "name": "faq_description",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Brief supporting text. 1–2 sentences.",
+            "required": 0,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placeholder": "e.g. Find answers to common questions...",
+            "rows": 3,
+            "maxlength": "",
+            "default_value": "",
+            "new_lines": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_taxonomy",
+                "operator": "==",
+                "value": "template_style:new"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "World-class editorial template for service pages. All fields are optional and gracefully degrade when empty.",
+    "show_in_rest": 1,
+    "display_title": "",
+    "modified": 1770725969
+}
