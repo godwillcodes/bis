@@ -24,14 +24,24 @@ get_template_part( 'components/layout/breadcrumb' );
                     <?php esc_html_e( "Let's Talk Access — Reach Out Today", 'bis' ); ?>
                 </h3>
 
-                <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
-                <script>
-                hbspt.forms.create({
-                    portalId: "22423917",
-                    formId: "6a41bbc9-085d-4e4d-b246-efda87962584",
-                    region: "na1"
-                });
-                </script>
+                <?php /* HubSpot sets cookies, so the form loads through js/consent.js after Accept. */ ?>
+                <div data-bis-hubspot-form data-portal-id="22423917" data-form-id="6a41bbc9-085d-4e4d-b246-efda87962584" data-region="na1">
+                    <div class="bisc-form-target" data-bisc-form-target></div>
+                    <div class="bisc-panel text-gray-700">
+                        <div class="bisc-msg-consent">
+                            <p class="m-0"><?php esc_html_e( 'The contact form is provided by HubSpot, which sets cookies, so it loads only if you accept them.', 'bis' ); ?></p>
+                            <div class="bisc-panel-actions">
+                                <button type="button" class="bisc-panel-btn" data-bis-cookie-settings><?php esc_html_e( 'Review cookie choices', 'bis' ); ?></button>
+                            </div>
+                        </div>
+                        <p class="bisc-msg-loading m-0" role="status"><?php esc_html_e( 'Loading the form.', 'bis' ); ?></p>
+                        <p class="bisc-msg-error m-0" role="status"><?php esc_html_e( 'The form could not load.', 'bis' ); ?></p>
+                        <p class="m-0">
+                            <?php esc_html_e( 'You can also email us at', 'bis' ); ?>
+                            <a href="mailto:info@bisworld.com">info@bisworld.com</a>.
+                        </p>
+                    </div>
+                </div>
             </div>
 
             <!-- Right: Contact Information & Map -->
@@ -129,13 +139,37 @@ get_template_part( 'components/layout/breadcrumb' );
                     </dl>
 
                     <!-- Google Map -->
-                    <div class="w-full h-64 lg:h-80 rounded-lg overflow-hidden border border-gray-700">
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3102.965074371742!2d-77.09527868465448!3d38.984179979562!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b7c97c8d2f5b5d%3A0x5b5b5b5b5b5b5b5b!2s2%20Bethesda%20Metro%20Center%2C%20Bethesda%2C%20MD%2020814!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus"
+                    <div class="w-full h-64 lg:h-80 rounded-lg overflow-hidden border border-gray-700" data-bis-embed>
+
+                        <iframe class="bisc-embed-frame" data-bisc-embed-frame
+                            data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3102.965074371742!2d-77.09527868465448!3d38.984179979562!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b7c97c8d2f5b5d%3A0x5b5b5b5b5b5b5b5b!2s2%20Bethesda%20Metro%20Center%2C%20Bethesda%2C%20MD%2020814!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus"
                             width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
                             referrerpolicy="no-referrer-when-downgrade"
                             title="<?php esc_attr_e( 'BIS office location map — 2 Bethesda Metro Center', 'bis' ); ?>">
                         </iframe>
+
+                        <?php /* Google Maps sets cookies, so the frame gets its src from js/consent.js after Accept. */ ?>
+
+                        <div class="bisc-panel text-gray-300 p-6">
+
+                            <div class="bisc-msg-consent">
+
+                                <p class="m-0"><?php esc_html_e( 'The map is provided by Google, which sets cookies, so it loads only if you accept them.', 'bis' ); ?></p>
+
+                                <div class="bisc-panel-actions">
+
+                                    <button type="button" class="bisc-panel-btn" data-bis-cookie-settings><?php esc_html_e( 'Review cookie choices', 'bis' ); ?></button>
+
+                                    <a class="bisc-panel-btn bisc-panel-btn-quiet" href="https://www.google.com/maps/search/?api=1&amp;query=2+Bethesda+Metro+Center+Bethesda+MD+20814" target="_blank" rel="noopener noreferrer"><?php esc_html_e( 'Open in Google Maps', 'bis' ); ?><span class="sr-only"> <?php esc_html_e( '(opens in a new tab)', 'bis' ); ?></span></a>
+
+                                </div>
+
+                            </div>
+
+                            <p class="bisc-msg-error m-0" role="status"><?php esc_html_e( 'The map could not load.', 'bis' ); ?></p>
+
+                        </div>
+
                     </div>
                 </div>
             </div>

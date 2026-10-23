@@ -13,6 +13,7 @@
     "dev": "postcss css/input.css -o css/output.css --watch",
     "build": "postcss css/input.css -o css/output.css",
     "build:css": "postcss css/input.css -o css/output.css",
-    "watch:css": "postcss css/input.css -o css/output.css --watch"
+    "watch:css": "postcss css/input.css -o css/output.css --watch",
+    "test": "node --test \"tests/*.test.mjs\""
   }
 }

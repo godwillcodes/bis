@@ -178,6 +178,7 @@
 						esc_html__( 'Birnbaum Interpreting Service', 'bis' )
 					);
 					?>
+					<button type="button" class="bisc-link bisc-link-footer" data-bis-cookie-settings><?php esc_html_e( 'Cookie settings', 'bis' ); ?></button>
 				</p>
 			</div>
 		</div>
@@ -224,21 +225,6 @@
 	setTimeout(function () {
 		if (typeof window.AOS === 'undefined') revealAll();
 	}, 3000);
-})();
-</script>
-<script>
-(function () {
-	// Consent-gated analytics. Default: load (preserves current behavior).
-	// To gate: define window.bisConsentGranted = function (purpose) { ... } before this script.
-	var grant = (typeof window.bisConsentGranted === 'function')
-		? !!window.bisConsentGranted('analytics')
-		: true;
-	if (!grant) return;
-	var s = document.createElement('script');
-	s.src = 'https://static.claydar.com/init.v1.js?id=coUSWCoUir';
-	s.async = true;
-	s.defer = true;
-	document.head.appendChild(s);
 })();
 </script>
 </body>

@@ -178,6 +178,105 @@ function bis_scripts() {
 add_action( 'wp_enqueue_scripts', 'bis_scripts' );
 
 /**
+ * Cookie consent (docs/consent.md).
+ *
+ * Consent is read in the browser only. The HTML is cached and shared between visitors, so
+ * nothing below may branch on the visitor's consent cookie.
+ */
+
+/**
+ * Privacy policy URL shown in the cookie notice.
+ *
+ * @return string
+ */
+function bis_privacy_policy_url() {
+	return (string) apply_filters( 'bis_privacy_policy_url', home_url( '/privacy-policy/' ) );
+}
+
+/**
+ * Google tag ID managed by Site Kit (G-xxxx or GT-xxxx), or '' when Site Kit has none or its
+ * "place snippet" toggle is off. Site-wide configuration, so it is safe in cached HTML.
+ *
+ * @return string
+ */
+function bis_sitekit_google_tag_id() {
+	$settings = get_option( 'googlesitekit_analytics-4_settings' );
+	if ( ! is_array( $settings ) ) {
+		return '';
+	}
+	if ( isset( $settings['useSnippet'] ) && ! $settings['useSnippet'] ) {
+		return '';
+	}
+	foreach ( array( 'googleTagID', 'measurementID' ) as $key ) {
+		if ( ! empty( $settings[ $key ] ) && preg_match( '/^(G|GT)-[A-Za-z0-9]+$/', (string) $settings[ $key ] ) ) {
+			return (string) $settings[ $key ];
+		}
+	}
+	return '';
+}
+
+/**
+ * Enqueue the consent banner styles and script. The script goes in <head>, not the footer, so
+ * window.bisConsent exists before anything asks for it. It owns every third-party load.
+ */
+function bis_consent_assets() {
+	$css_path = get_template_directory() . '/css/consent.css';
+	wp_enqueue_style(
+		'bis-consent',
+		get_template_directory_uri() . '/css/consent.css',
+		array(),
+		file_exists( $css_path ) ? filemtime( $css_path ) : _S_VERSION
+	);
+
+	$js_path = get_template_directory() . '/js/consent.js';
+	wp_enqueue_script(
+		'bis-consent',
+		get_template_directory_uri() . '/js/consent.js',
+		array(),
+		file_exists( $js_path ) ? filemtime( $js_path ) : _S_VERSION,
+		false
+	);
+	wp_add_inline_script(
+		'bis-consent',
+		'window.bisConsentConfig = ' . wp_json_encode( array( 'gaId' => bis_sitekit_google_tag_id() ) ) . ';',
+		'before'
+	);
+}
+add_action( 'wp_enqueue_scripts', 'bis_consent_assets' );
+
+/**
+ * Google Consent Mode v2 default: everything denied until the visitor accepts. Printed first in
+ * <head> (priority 0) so it precedes any gtag call.
+ */
+function bis_consent_mode_default() {
+	?>
+	<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('consent', 'default', {
+		'analytics_storage': 'denied',
+		'ad_storage': 'denied',
+		'ad_user_data': 'denied',
+		'ad_personalization': 'denied',
+		'functionality_storage': 'denied',
+		'personalization_storage': 'denied',
+		'security_storage': 'granted',
+		'wait_for_update': 500
+	});
+	gtag('set', 'ads_data_redaction', true);
+	</script>
+	<?php
+}
+add_action( 'wp_head', 'bis_consent_mode_default', 0 );
+
+/**
+ * Stop Site Kit printing its Google tag. It runs before any consent, sending the visitor's IP
+ * address and page URL to Google. js/consent.js loads the same tag after Accept instead, using
+ * the ID from bis_sitekit_google_tag_id(). Site Kit's dashboard and reports are unaffected.
+ */
+add_filter( 'googlesitekit_analytics-4_tag_blocked', '__return_true' );
+
+/**
  * Disable comments globally
  */
 function bis_disable_comments() {

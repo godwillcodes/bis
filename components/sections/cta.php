@@ -16,33 +16,40 @@
                 </p>
 
                 <div class="max-w-4xl mx-auto">
-                    <script src="https://js.hsforms.net/forms/embed/v2.js" defer></script>
-                    <div id="cta-hubspot-form"
-                        role="form"
-                        aria-label="<?php esc_attr_e( 'Contact form', 'bis' ); ?>"></div>
+                    <?php /* HubSpot sets cookies, so the form loads through js/consent.js after Accept. */ ?>
+                    <div data-bis-hubspot-form data-portal-id="22423917" data-form-id="fcd51d31-6a18-499b-b052-67cc3d49a661" data-region="na1" data-css-class="custom-hs-form">
+                        <div id="cta-hubspot-form"
+                            class="bisc-form-target"
+                            data-bisc-form-target
+                            role="form"
+                            aria-label="<?php esc_attr_e( 'Contact form', 'bis' ); ?>"></div>
 
-                    <script>
-                    window.addEventListener('DOMContentLoaded', function () {
-                        if (typeof hbspt === 'undefined' || !hbspt.forms) { return; }
-                        hbspt.forms.create({
-                            region:   "na1",
-                            portalId: "22423917",
-                            formId:   "fcd51d31-6a18-499b-b052-67cc3d49a661",
-                            target:   "#cta-hubspot-form",
-                            cssClass: "custom-hs-form"
-                        });
-                    });
-                    </script>
+                        <div class="bisc-panel mt-8 text-gray-200">
+                            <div class="bisc-msg-consent">
+                                <p class="m-0"><?php esc_html_e( 'The contact form is provided by HubSpot, which sets cookies, so it loads only if you accept them.', 'bis' ); ?></p>
+                                <div class="bisc-panel-actions bisc-panel-actions-center">
+                                    <button type="button" class="bisc-panel-btn" data-bis-cookie-settings><?php esc_html_e( 'Review cookie choices', 'bis' ); ?></button>
+                                </div>
+                            </div>
+                            <p class="bisc-msg-loading m-0" role="status"><?php esc_html_e( 'Loading the form.', 'bis' ); ?></p>
+                            <p class="bisc-msg-error m-0" role="status"><?php esc_html_e( 'The form could not load.', 'bis' ); ?></p>
+                            <p class="m-0">
+                                <?php esc_html_e( 'You can also email us at', 'bis' ); ?>
+                                <a href="mailto:info@bisworld.com">info@bisworld.com</a>.
+                            </p>
+                        </div>
 
-                    <p class="text-sm text-gray-200">
-                        <?php
-                        printf(
-                            /* translators: %s: link to privacy policy */
-                            esc_html__( "By submitting this form, you agree to receive marketing emails from BIS. You also agree to BIS's %s.", 'bis' ),
-                            '<a href="' . esc_url( home_url( '/privacy-policy' ) ) . '" class="text-white underline hover:no-underline focus:outline-none focus-visible:ring-2 focus-visible:ring-white rounded-sm">' . esc_html__( 'Privacy Policy', 'bis' ) . '</a>'
-                        );
-                        ?>
-                    </p>
+                        <?php /* Shown only while the form is: the sentence refers to submitting it. */ ?>
+                        <p class="bisc-when-ready text-sm text-gray-200">
+                            <?php
+                            printf(
+                                /* translators: %s: link to privacy policy */
+                                esc_html__( "By submitting this form, you agree to receive marketing emails from BIS. You also agree to BIS's %s.", 'bis' ),
+                                '<a href="' . esc_url( home_url( '/privacy-policy' ) ) . '" class="text-white underline hover:no-underline focus:outline-none focus-visible:ring-2 focus-visible:ring-white rounded-sm">' . esc_html__( 'Privacy Policy', 'bis' ) . '</a>'
+                            );
+                            ?>
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>

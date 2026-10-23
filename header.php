@@ -42,6 +42,8 @@
     <div id="page" class="site">
         <a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e('Skip to content', 'bis'); ?></a>
 
+        <?php get_template_part( 'components/layout/cookie-consent' ); ?>
+
         <!-- Sticky Navigation -->
         <header id="masthead"
             class=" fixed px-4 sm:px-6 lg:px-10 top-0 md:top-0 lg:top-0 left-0 right-0 z-50 bg-red-600 shadow-lg">

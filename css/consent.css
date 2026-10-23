@@ -1,0 +1,331 @@
+/*
+ * Cookie consent: banner, HubSpot form and map placeholders, footer link.
+ * Plain CSS on purpose: it is not part of the Tailwind build, so changing it never needs
+ * `npm run build`. Markup is components/layout/cookie-consent.php.
+ *
+ * Colors: #D12E31 is Tailwind red-700 from tailwind.config.js. White text on the brand red
+ * (#ED3437) is 4.08:1, under the 4.5:1 AA minimum for body-size text; on #D12E31 it is 5.06:1.
+ */
+
+.bisc {
+	--bisc-surface: #ffffff;
+	--bisc-border: rgba(17, 24, 39, 0.1);
+	--bisc-ink: #111827;
+	--bisc-muted: #4b5563;
+	--bisc-accent: #d12e31;
+	--bisc-accent-hover: #b5282b;
+	--bisc-neutral: #f3f4f6;
+	--bisc-neutral-hover: #e5e7eb;
+
+	position: fixed;
+	left: 24px;
+	bottom: 24px;
+	z-index: 90;
+	box-sizing: border-box;
+	width: 420px;
+	max-width: calc(100vw - 32px);
+	padding: 24px;
+	color: var(--bisc-ink);
+	background: var(--bisc-surface);
+	border: 1px solid var(--bisc-border);
+	border-radius: 20px;
+	box-shadow: 0 24px 48px -16px rgba(17, 24, 39, 0.28), 0 2px 6px rgba(17, 24, 39, 0.06);
+	font-family: Montserrat, ui-sans-serif, system-ui, sans-serif;
+	font-size: 15px;
+	line-height: 1.6;
+	-webkit-font-smoothing: antialiased;
+
+	/* Closed: out of the tab order and the accessibility tree, not just invisible. */
+	visibility: hidden;
+	opacity: 0;
+	transform: translateY(8px);
+	transition: opacity 0.24s ease, transform 0.24s cubic-bezier(0.2, 0.8, 0.2, 1), visibility 0s linear 0.24s;
+}
+
+.bisc[data-open="true"] {
+	visibility: visible;
+	opacity: 1;
+	transform: none;
+	transition-delay: 0s;
+}
+
+.bisc:focus {
+	outline: none;
+}
+
+.bisc [hidden] {
+	display: none !important;
+}
+
+.bisc-title {
+	margin: 0 40px 8px 0;
+	font-size: 17px;
+	font-weight: 600;
+	line-height: 1.3;
+	letter-spacing: -0.01em;
+	color: var(--bisc-ink);
+}
+
+.bisc-copy {
+	margin: 0 0 10px;
+	color: var(--bisc-muted);
+}
+
+.bisc-status {
+	margin: 0 0 10px;
+	font-size: 14px;
+	font-weight: 600;
+	color: var(--bisc-ink);
+}
+
+.bisc-text-link {
+	color: var(--bisc-ink);
+	font-weight: 600;
+	text-decoration: underline;
+	text-underline-offset: 3px;
+	text-decoration-color: rgba(17, 24, 39, 0.4);
+}
+
+.bisc-text-link:hover {
+	text-decoration-color: currentColor;
+}
+
+.bisc-actions {
+	display: flex;
+	gap: 10px;
+	margin-top: 18px;
+}
+
+/* Decline and Accept share size, shape and weight. Only the fill differs. */
+.bisc-btn {
+	flex: 1 1 0;
+	min-height: 48px;
+	padding: 0 20px;
+	border: 0;
+	border-radius: 9999px;
+	font: inherit;
+	font-size: 15px;
+	font-weight: 600;
+	line-height: 1;
+	cursor: pointer;
+	transition: background-color 0.16s ease;
+}
+
+.bisc-btn-decline {
+	background: var(--bisc-neutral);
+	color: var(--bisc-ink);
+}
+
+.bisc-btn-decline:hover {
+	background: var(--bisc-neutral-hover);
+}
+
+.bisc-btn-accept {
+	background: var(--bisc-accent);
+	color: #ffffff;
+}
+
+.bisc-btn-accept:hover {
+	background: var(--bisc-accent-hover);
+}
+
+.bisc-dismiss {
+	position: absolute;
+	top: 14px;
+	right: 14px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 36px;
+	height: 36px;
+	padding: 0;
+	border: 0;
+	border-radius: 50%;
+	background: transparent;
+	color: var(--bisc-muted);
+	cursor: pointer;
+	transition: background-color 0.16s ease, color 0.16s ease;
+}
+
+.bisc-dismiss:hover {
+	background: var(--bisc-neutral);
+	color: var(--bisc-ink);
+}
+
+/*
+ * The theme's global focus ring is white (css/input.css), which disappears on a white card.
+ * These are dark with a white gap, so they read on the card, on the red button and on the
+ * dark form and map panels.
+ */
+.bisc a:focus-visible,
+.bisc button:focus-visible,
+.bisc-link:focus-visible,
+.bisc-panel-btn:focus-visible,
+.bisc-panel a:focus-visible {
+	outline: 2px solid var(--bisc-ink, #111827);
+	outline-offset: 2px;
+	box-shadow: 0 0 0 2px #ffffff;
+}
+
+@media (max-width: 640px) {
+	.bisc {
+		right: 12px;
+		left: 12px;
+		bottom: max(12px, env(safe-area-inset-bottom));
+		width: auto;
+		max-width: none;
+		padding: 22px;
+	}
+}
+
+@media (max-width: 340px) {
+	.bisc-actions {
+		flex-direction: column;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.bisc {
+		transform: none;
+		transition: opacity 0.01ms linear, visibility 0s linear 0s;
+	}
+
+	.bisc-btn,
+	.bisc-dismiss {
+		transition: none;
+	}
+}
+
+@media print {
+	.bisc {
+		display: none;
+	}
+}
+
+/* Footer "Cookie settings" control: a button that reads as a link. */
+.bisc-link {
+	display: inline;
+	padding: 0;
+	border: 0;
+	background: none;
+	font: inherit;
+	color: inherit;
+	text-decoration: underline;
+	text-underline-offset: 3px;
+	cursor: pointer;
+}
+
+.bisc-link:hover {
+	color: #ffffff;
+}
+
+.bisc-link-footer {
+	display: inline-block;
+	margin-left: 0.75rem;
+	padding: 0.625rem 0;
+}
+
+/* Placeholders for gated content (HubSpot form, map). Without consent the fallback shows. */
+.bisc-panel {
+	font-family: inherit;
+}
+
+.bisc-panel-btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 48px;
+	padding: 0 24px;
+	border: 0;
+	border-radius: 9999px;
+	background: #d12e31;
+	color: #ffffff;
+	font: inherit;
+	font-weight: 600;
+	text-decoration: none;
+	cursor: pointer;
+	transition: background-color 0.16s ease;
+}
+
+.bisc-panel-btn:hover {
+	background: #b5282b;
+}
+
+.bisc-panel-btn-quiet {
+	background: transparent;
+	color: inherit;
+	box-shadow: inset 0 0 0 1.5px currentColor;
+}
+
+.bisc-panel-btn-quiet:hover {
+	background: rgba(255, 255, 255, 0.1);
+}
+
+.bisc-panel-actions {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 12px;
+	margin: 1rem 0;
+}
+
+.bisc-panel-actions-center {
+	justify-content: center;
+}
+
+[data-bis-hubspot-form] .bisc-when-ready {
+	display: none;
+}
+
+[data-bis-hubspot-form][data-state="ready"] .bisc-when-ready {
+	display: block;
+}
+
+.bisc-panel a:not(.bisc-panel-btn) {
+	color: inherit;
+	font-weight: 600;
+	text-decoration: underline;
+	text-underline-offset: 3px;
+}
+
+[data-bis-hubspot-form] .bisc-form-target {
+	display: none;
+}
+
+[data-bis-hubspot-form][data-state="ready"] .bisc-form-target,
+[data-bis-hubspot-form][data-state="loading"] .bisc-form-target {
+	display: block;
+}
+
+[data-bis-hubspot-form][data-state="ready"] .bisc-panel {
+	display: none;
+}
+
+[data-bis-embed][data-state="ready"] .bisc-panel {
+	display: none;
+}
+
+[data-bis-embed] .bisc-embed-frame {
+	display: none;
+	width: 100%;
+	height: 100%;
+	border: 0;
+}
+
+[data-bis-embed][data-state="ready"] .bisc-embed-frame {
+	display: block;
+}
+
+.bisc-panel .bisc-msg-loading,
+.bisc-panel .bisc-msg-error {
+	display: none;
+}
+
+[data-state="loading"] .bisc-panel .bisc-msg-consent,
+[data-state="error"] .bisc-panel .bisc-msg-consent {
+	display: none;
+}
+
+[data-state="loading"] .bisc-panel .bisc-msg-loading,
+[data-state="error"] .bisc-panel .bisc-msg-error {
+	display: block;
+}
